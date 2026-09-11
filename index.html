@@ -15,8 +15,8 @@
             --card-bg: #141414;
             --accent-gold: #d4af37;
             --accent-gold-hover: #f3e5ab;
-            --text-light: #ffffff; /* جعل النصوص الرئيسية باللون الأبيض الناصع */
-            --text-muted: #d1d1d1; /* إبراز النصوص الفرعية باللون الأبيض الهادئ */
+            --text-light: #ffffff;
+            --text-muted: #d1d1d1;
             --border-color: #262626;
         }
 
@@ -31,8 +31,6 @@
             background-color: var(--bg-dark);
             color: var(--text-light);
             line-height: 1.6;
-            
-            /* خلفية الموقع بملف الصورة مع تظليل داكن راقي */
             background-image: linear-gradient(rgba(10, 10, 10, 0.88), rgba(10, 10, 10, 0.88)), url('IMG_3795.jpeg');
             background-size: cover;
             background-position: center;
@@ -65,7 +63,6 @@
             gap: 12px;
         }
 
-        /* الصورة الدائرية في الركن العلوي */
         .brand-avatar {
             width: 48px;
             height: 48px;
@@ -79,7 +76,7 @@
             font-size: 22px;
             font-weight: 800;
             letter-spacing: 2px;
-            color: #ffffff; /* اسم المحل باللون الأبيض */
+            color: #ffffff;
             text-transform: uppercase;
         }
 
@@ -117,14 +114,14 @@
 
         .hero-banner h1 {
             font-size: 38px;
-            color: #ffffff; /* العنوان الرئيسي باللون الأبيض */
+            color: #ffffff;
             margin-bottom: 10px;
             font-weight: 800;
             letter-spacing: 1px;
         }
 
         .hero-banner p {
-            color: #ffffff; /* النص الفرعي باللون الأبيض */
+            color: #ffffff;
             font-size: 16px;
             max-width: 650px;
             margin: 0 auto 20px;
@@ -278,14 +275,14 @@
             font-size: 17px;
             font-weight: 700;
             margin-bottom: 8px;
-            color: #ffffff; /* أسماء البطاقات باللون الأبيض */
+            color: #ffffff;
         }
 
         .product-details {
             display: flex;
             gap: 15px;
             font-size: 13px;
-            color: #d1d1d1; /* تفاصيل المنتج باللون الأبيض الواضح */
+            color: #d1d1d1;
             margin-bottom: 15px;
         }
 
@@ -476,7 +473,6 @@
     <header>
         <div class="header-container">
             <div class="brand-logo">
-                <!-- صورة دائرية صغيرة للعلامة التجارية في الركن العلوي -->
                 <img src="IMG_3795.jpeg" alt="HANDSOME Logo" class="brand-avatar">
                 <span class="brand-title">HANDSOME</span>
             </div>
@@ -504,16 +500,16 @@
     <!-- Navigation Tabs -->
     <section class="tabs-section">
         <div class="tabs-nav">
-            <button class="tab-btn active" onclick="switchTab('groom')">
+            <button class="tab-btn active" onclick="switchTab(event, 'groom')">
                 <i class="fa-solid fa-crown"></i> Groom Suits
             </button>
-            <button class="tab-btn" onclick="switchTab('guests')">
+            <button class="tab-btn" onclick="switchTab(event, 'guests')">
                 <i class="fa-solid fa-user-check"></i> Guest Suits
             </button>
-            <button class="tab-btn" onclick="switchTab('kids')">
+            <button class="tab-btn" onclick="switchTab(event, 'kids')">
                 <i class="fa-solid fa-child"></i> Kids Collection
             </button>
-            <button class="tab-btn" onclick="switchTab('accessories')">
+            <button class="tab-btn" onclick="switchTab(event, 'accessories')">
                 <i class="fa-solid fa-gem"></i> Shoes & Accessories
             </button>
         </div>
@@ -522,8 +518,6 @@
     <!-- Window 1: Groom Suits -->
     <div id="groom" class="tab-content active">
         <div class="products-grid">
-
-            <!-- Item 1 -->
             <div class="product-card">
                 <div class="product-img-box">
                     <span class="product-tag">Rent / Sale</span>
@@ -542,7 +536,6 @@
                 </div>
             </div>
 
-            <!-- Item 2 -->
             <div class="product-card">
                 <div class="product-img-box">
                     <span class="product-tag">Rent / Sale</span>
@@ -560,14 +553,12 @@
                     </button>
                 </div>
             </div>
-
         </div>
     </div>
 
     <!-- Window 2: Guests Suits -->
     <div id="guests" class="tab-content">
         <div class="products-grid">
-
             <div class="product-card">
                 <div class="product-img-box">
                     <span class="product-tag">Rent / Sale</span>
@@ -585,14 +576,12 @@
                     </button>
                 </div>
             </div>
-
         </div>
     </div>
 
     <!-- Window 3: Kids Suits -->
     <div id="kids" class="tab-content">
         <div class="products-grid">
-
             <div class="product-card">
                 <div class="product-img-box">
                     <span class="product-tag">Rent / Sale</span>
@@ -610,14 +599,12 @@
                     </button>
                 </div>
             </div>
-
         </div>
     </div>
 
     <!-- Window 4: Shoes & Accessories -->
     <div id="accessories" class="tab-content">
         <div class="products-grid">
-
             <div class="product-card">
                 <div class="product-img-box">
                     <span class="product-tag">Sale</span>
@@ -635,7 +622,6 @@
                     </button>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -685,7 +671,7 @@
 
     <!-- JavaScript Navigation -->
     <script>
-        function switchTab(tabId) {
+        function switchTab(evt, tabId) {
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => content.classList.remove('active'));
 
@@ -693,7 +679,10 @@
             buttons.forEach(btn => btn.classList.remove('active'));
 
             document.getElementById(tabId).classList.add('active');
-            event.currentTarget.classList.add('active');
+            
+            if (evt && evt.currentTarget) {
+                evt.currentTarget.classList.add('active');
+            }
         }
 
         function openModal(productName) {
