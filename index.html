@@ -31,7 +31,11 @@
             background-color: var(--bg-dark);
             color: var(--text-light);
             line-height: 1.6;
-            background-image: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, rgba(10, 10, 10, 1) 70%);
+            
+            /* تم إضافة صورتك IMG_3795.jpeg هنا كخلفية للموقع بالكامل مع تظليل راقي */
+            background-image: linear-gradient(rgba(10, 10, 10, 0.88), rgba(10, 10, 10, 0.88)), url('IMG_3795.jpeg');
+            background-size: cover;
+            background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
@@ -135,7 +139,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            background: rgba(20, 20, 20, 0.8);
+            background: rgba(20, 20, 20, 0.85);
             padding: 6px 16px;
             border-radius: 20px;
             border: 1px solid var(--border-color);
@@ -158,7 +162,7 @@
         }
 
         .tab-btn {
-            background: var(--card-bg);
+            background: rgba(20, 20, 20, 0.85);
             color: var(--text-light);
             border: 1px solid var(--border-color);
             padding: 12px 22px;
@@ -203,13 +207,14 @@
         }
 
         .product-card {
-            background-color: var(--card-bg);
+            background-color: rgba(20, 20, 20, 0.9);
             border: 1px solid var(--border-color);
             border-radius: 12px;
             overflow: hidden;
             transition: transform 0.3s, border-color 0.3s;
             display: flex;
             flex-direction: column;
+            backdrop-filter: blur(5px);
         }
 
         .product-card:hover {
@@ -225,7 +230,6 @@
             overflow: hidden;
         }
 
-        /* Place your actual image URL inside the src attribute */
         .product-img-box img {
             width: 100%;
             height: 100%;
@@ -312,7 +316,7 @@
 
         /* Footer */
         footer {
-            background-color: #050505;
+            background-color: rgba(5, 5, 5, 0.95);
             border-top: 1px solid var(--border-color);
             padding: 40px 20px 20px;
             text-align: center;
@@ -507,8 +511,7 @@
             <div class="product-card">
                 <div class="product-img-box">
                     <span class="product-tag">Rent / Sale</span>
-                    <!-- Replace 'https://via.placeholder.com/300x400' with your actual image file URL -->
-                    <img src="https://via.placeholder.com/300x400/111111/d4af37?text=Groom+Suit+1" alt="Black Tuxedo">
+                    <img src="IMG_3795.jpeg" alt="Groom Suit">
                 </div>
                 <div class="product-info">
                     <div class="product-title">Black Satin Peak Lapel Tuxedo</div>
@@ -527,7 +530,7 @@
             <div class="product-card">
                 <div class="product-img-box">
                     <span class="product-tag">Rent / Sale</span>
-                    <img src="https://via.placeholder.com/300x400/111111/d4af37?text=Groom+Suit+2" alt="White Tuxedo">
+                    <img src="IMG_3795.jpeg" alt="Groom Suit 2">
                 </div>
                 <div class="product-info">
                     <div class="product-title">Royal White Groom Suit</div>
@@ -552,7 +555,7 @@
             <div class="product-card">
                 <div class="product-img-box">
                     <span class="product-tag">Rent / Sale</span>
-                    <img src="https://via.placeholder.com/300x400/111111/d4af37?text=Guest+Suit+1" alt="Navy Suit">
+                    <img src="IMG_3795.jpeg" alt="Guest Suit">
                 </div>
                 <div class="product-info">
                     <div class="product-title">Classic Navy Slim Fit Suit</div>
@@ -577,7 +580,7 @@
             <div class="product-card">
                 <div class="product-img-box">
                     <span class="product-tag">Rent / Sale</span>
-                    <img src="https://via.placeholder.com/300x400/111111/d4af37?text=Kids+Suit+1" alt="Kids Suit">
+                    <img src="IMG_3795.jpeg" alt="Kids Suit">
                 </div>
                 <div class="product-info">
                     <div class="product-title">3-Piece Formal Kids Suit</div>
@@ -602,7 +605,7 @@
             <div class="product-card">
                 <div class="product-img-box">
                     <span class="product-tag">Sale</span>
-                    <img src="https://via.placeholder.com/300x400/111111/d4af37?text=Leather+Shoes" alt="Leather Shoes">
+                    <img src="IMG_3795.jpeg" alt="Shoes">
                 </div>
                 <div class="product-info">
                     <div class="product-title">Italian Genuine Leather Shoes</div>
@@ -612,23 +615,6 @@
                     </div>
                     <div class="product-price">Price on Request</div>
                     <button class="action-btn" onclick="openModal('Italian Genuine Leather Shoes')">
-                        <i class="fa-regular fa-calendar-check"></i> Book / Inquire
-                    </button>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-img-box">
-                    <span class="product-tag">Sale</span>
-                    <img src="https://via.placeholder.com/300x400/111111/d4af37?text=Bowties+%26+Cufflinks" alt="Accessories Set">
-                </div>
-                <div class="product-info">
-                    <div class="product-title">Luxury Bowtie & Cufflinks Set</div>
-                    <div class="product-details">
-                        <span><i class="fa-solid fa-gem"></i> Silk & Steel</span>
-                    </div>
-                    <div class="product-price">Price on Request</div>
-                    <button class="action-btn" onclick="openModal('Luxury Bowtie & Cufflinks Set')">
                         <i class="fa-regular fa-calendar-check"></i> Book / Inquire
                     </button>
                 </div>
