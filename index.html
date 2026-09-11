@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HANDSOME - Premium Suit Rental & Sales</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons Full Collection -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --bg-dark: #0f0f0f;
-            --card-bg: #1a1a1a;
+            --bg-dark: #0a0a0a;
+            --card-bg: #141414;
             --accent-gold: #d4af37;
             --accent-gold-hover: #f3e5ab;
             --text-light: #f5f5f5;
-            --text-muted: #a0a0a0;
-            --border-color: #2a2a2a;
+            --text-muted: #999999;
+            --border-color: #262626;
         }
 
         * {
@@ -31,16 +31,19 @@
             background-color: var(--bg-dark);
             color: var(--text-light);
             line-height: 1.6;
+            background-image: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, rgba(10, 10, 10, 1) 70%);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         /* Header & Navigation */
         header {
-            background-color: rgba(15, 15, 15, 0.95);
+            background-color: rgba(10, 10, 10, 0.9);
             border-bottom: 1px solid var(--border-color);
             position: sticky;
             top: 0;
             z-index: 1000;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
         }
 
         .header-container {
@@ -71,10 +74,16 @@
             text-transform: uppercase;
         }
 
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
         .contact-top-btn {
             background: linear-gradient(135deg, var(--accent-gold), #aa820a);
             color: #000;
-            padding: 8px 18px;
+            padding: 8px 20px;
             border-radius: 25px;
             text-decoration: none;
             font-weight: 700;
@@ -82,23 +91,23 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            font-size: 14px;
         }
 
         .contact-top-btn:hover {
             background: var(--accent-gold-hover);
             transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
         }
 
         /* Hero Banner */
         .hero-banner {
             text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(180deg, rgba(212,175,55,0.05) 0%, rgba(15,15,15,1) 100%);
-            border-bottom: 1px solid var(--border-color);
+            padding: 50px 20px 30px;
         }
 
         .hero-banner h1 {
-            font-size: 36px;
+            font-size: 38px;
             color: var(--accent-gold);
             margin-bottom: 10px;
             font-weight: 800;
@@ -107,22 +116,42 @@
 
         .hero-banner p {
             color: var(--text-muted);
-            font-size: 18px;
-            max-width: 600px;
-            margin: 0 auto;
+            font-size: 16px;
+            max-width: 650px;
+            margin: 0 auto 20px;
+        }
+
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            color: var(--accent-gold);
+            font-size: 14px;
+        }
+
+        .hero-features span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(20, 20, 20, 0.8);
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
         }
 
         /* Tabs Navigation Section */
         .tabs-section {
             max-width: 1200px;
-            margin: 40px auto 20px;
+            margin: 20px auto;
             padding: 0 20px;
         }
 
         .tabs-nav {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 12px;
             flex-wrap: wrap;
             border-bottom: 2px solid var(--border-color);
             padding-bottom: 15px;
@@ -132,9 +161,9 @@
             background: var(--card-bg);
             color: var(--text-light);
             border: 1px solid var(--border-color);
-            padding: 12px 24px;
+            padding: 12px 22px;
             border-radius: 8px;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -152,6 +181,7 @@
             background-color: var(--accent-gold);
             color: #000;
             border-color: var(--accent-gold);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
         }
 
         /* Category Grid & Cards */
@@ -168,7 +198,7 @@
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
             gap: 25px;
         }
 
@@ -178,52 +208,83 @@
             border-radius: 12px;
             overflow: hidden;
             transition: transform 0.3s, border-color 0.3s;
+            display: flex;
+            flex-direction: column;
         }
 
         .product-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-6px);
             border-color: var(--accent-gold);
         }
 
         .product-img-box {
             width: 100%;
-            height: 320px;
-            background-color: #252525;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--text-muted);
-            font-size: 40px;
+            height: 340px;
+            background-color: #1e1e1e;
             position: relative;
+            overflow: hidden;
+        }
+
+        /* Place your actual image URL inside the src attribute */
+        .product-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-img-box img {
+            transform: scale(1.05);
         }
 
         .product-tag {
             position: absolute;
             top: 12px;
             left: 12px;
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0, 0, 0, 0.85);
             color: var(--accent-gold);
             border: 1px solid var(--accent-gold);
-            padding: 4px 10px;
-            border-radius: 5px;
-            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
             font-weight: 700;
+            letter-spacing: 0.5px;
+            z-index: 2;
         }
 
         .product-info {
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
         .product-title {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 700;
             margin-bottom: 8px;
+            color: var(--text-light);
+        }
+
+        .product-details {
+            display: flex;
+            gap: 15px;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .product-details span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
         .product-price {
             color: var(--accent-gold);
-            font-weight: 600;
-            font-size: 15px;
+            font-weight: 700;
+            font-size: 16px;
+            margin-top: auto;
             margin-bottom: 15px;
         }
 
@@ -235,6 +296,7 @@
             padding: 10px;
             border-radius: 6px;
             font-weight: 600;
+            font-size: 13px;
             cursor: pointer;
             transition: 0.3s;
             display: flex;
@@ -250,9 +312,9 @@
 
         /* Footer */
         footer {
-            background-color: #0a0a0a;
+            background-color: #050505;
             border-top: 1px solid var(--border-color);
-            padding: 40px 20px;
+            padding: 40px 20px 20px;
             text-align: center;
             margin-top: 60px;
         }
@@ -262,6 +324,33 @@
             margin: 0 auto 20px;
         }
 
+        .footer-socials {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-link:hover {
+            border-color: var(--accent-gold);
+            background: var(--accent-gold);
+            color: #000;
+        }
+
         .phone-number {
             font-size: 20px;
             color: var(--accent-gold);
@@ -269,7 +358,7 @@
             margin: 10px 0;
         }
 
-        /* Modal / Booking Window */
+        /* Modal Popup */
         .modal {
             display: none;
             position: fixed;
@@ -277,7 +366,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0, 0, 0, 0.85);
             z-index: 2000;
             justify-content: center;
             align-items: center;
@@ -307,6 +396,9 @@
             color: var(--accent-gold);
             margin-bottom: 20px;
             font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .form-group {
@@ -317,14 +409,14 @@
         .form-group label {
             display: block;
             margin-bottom: 5px;
-            font-size: 14px;
+            font-size: 13px;
             color: var(--text-muted);
         }
 
         .form-group input, .form-group select {
             width: 100%;
             padding: 10px;
-            background-color: #101010;
+            background-color: #0a0a0a;
             border: 1px solid var(--border-color);
             border-radius: 6px;
             color: var(--text-light);
@@ -343,15 +435,19 @@
             padding: 12px;
             border-radius: 6px;
             font-weight: 700;
-            font-size: 16px;
+            font-size: 15px;
             cursor: pointer;
             margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
         }
 
         @media (max-width: 768px) {
-            .hero-banner h1 { font-size: 26px; }
+            .hero-banner h1 { font-size: 28px; }
             .tabs-nav { gap: 8px; }
-            .tab-btn { padding: 10px 16px; font-size: 13px; }
+            .tab-btn { padding: 10px 14px; font-size: 13px; }
         }
     </style>
 </head>
@@ -364,16 +460,25 @@
                 <i class="fa-solid fa-user-tie"></i>
                 <span class="brand-title">HANDSOME</span>
             </div>
-            <a href="https://wa.me/213556938064" target="_blank" class="contact-top-btn">
-                <i class="fa-brands fa-whatsapp"></i> Book Now
-            </a>
+            <div class="header-actions">
+                <a href="https://wa.me/213556938064" target="_blank" class="contact-top-btn">
+                    <i class="fa-brands fa-whatsapp"></i> Book Now
+                </a>
+            </div>
         </div>
     </header>
 
     <!-- Hero Banner -->
     <section class="hero-banner">
         <h1>HANDSOME LOCATION COSTUME</h1>
-        <p>Premium Suit Rental & Sales for Weddings and Special Occasions</p>
+        <p>Your Ultimate Destination for High-End Wedding Suits, Tuxedos & Men's Formal Wear</p>
+
+        <div class="hero-features">
+            <span><i class="fa-solid fa-scissors"></i> Custom Fitting</span>
+            <span><i class="fa-solid fa-crown"></i> VIP Quality</span>
+            <span><i class="fa-solid fa-handshake"></i> Rent & Sale</span>
+            <span><i class="fa-solid fa-truck-fast"></i> Quick Service</span>
+        </div>
     </section>
 
     <!-- Navigation Tabs -->
@@ -386,7 +491,7 @@
                 <i class="fa-solid fa-user-check"></i> Guest Suits
             </button>
             <button class="tab-btn" onclick="switchTab('kids')">
-                <i class="fa-solid fa-child"></i> Kids Suits
+                <i class="fa-solid fa-child"></i> Kids Collection
             </button>
             <button class="tab-btn" onclick="switchTab('accessories')">
                 <i class="fa-solid fa-gem"></i> Shoes & Accessories
@@ -397,89 +502,138 @@
     <!-- Window 1: Groom Suits -->
     <div id="groom" class="tab-content active">
         <div class="products-grid">
+
+            <!-- Item 1 -->
             <div class="product-card">
                 <div class="product-img-box">
                     <span class="product-tag">Rent / Sale</span>
-                    <i class="fa-solid fa-user-tie"></i>
+                    <!-- Replace 'https://via.placeholder.com/300x400' with your actual image file URL -->
+                    <img src="https://via.placeholder.com/300x400/111111/d4af37?text=Groom+Suit+1" alt="Black Tuxedo">
                 </div>
                 <div class="product-info">
-                    <div class="product-title">Full Tuxedo Groom Suit</div>
+                    <div class="product-title">Black Satin Peak Lapel Tuxedo</div>
+                    <div class="product-details">
+                        <span><i class="fa-solid fa-vest"></i> 3-Piece</span>
+                        <span><i class="fa-solid fa-palette"></i> Black</span>
+                    </div>
                     <div class="product-price">Price on Request</div>
-                    <button class="action-btn" onclick="openModal('Full Tuxedo Groom Suit')">
-                        <i class="fa-regular fa-calendar-check"></i> Inquiry / Reservation
+                    <button class="action-btn" onclick="openModal('Black Satin Peak Lapel Tuxedo')">
+                        <i class="fa-regular fa-calendar-check"></i> Book / Inquire
                     </button>
                 </div>
             </div>
+
+            <!-- Item 2 -->
             <div class="product-card">
                 <div class="product-img-box">
                     <span class="product-tag">Rent / Sale</span>
-                    <i class="fa-solid fa-user-tie"></i>
+                    <img src="https://via.placeholder.com/300x400/111111/d4af37?text=Groom+Suit+2" alt="White Tuxedo">
                 </div>
                 <div class="product-info">
-                    <div class="product-title">Royal White Tuxedo</div>
+                    <div class="product-title">Royal White Groom Suit</div>
+                    <div class="product-details">
+                        <span><i class="fa-solid fa-vest"></i> 2-Piece</span>
+                        <span><i class="fa-solid fa-palette"></i> White & Black</span>
+                    </div>
                     <div class="product-price">Price on Request</div>
-                    <button class="action-btn" onclick="openModal('Royal White Tuxedo')">
-                        <i class="fa-regular fa-calendar-check"></i> Inquiry / Reservation
+                    <button class="action-btn" onclick="openModal('Royal White Groom Suit')">
+                        <i class="fa-regular fa-calendar-check"></i> Book / Inquire
                     </button>
                 </div>
             </div>
+
         </div>
     </div>
 
     <!-- Window 2: Guests Suits -->
     <div id="guests" class="tab-content">
         <div class="products-grid">
+
             <div class="product-card">
                 <div class="product-img-box">
                     <span class="product-tag">Rent / Sale</span>
-                    <i class="fa-solid fa-shirt"></i>
+                    <img src="https://via.placeholder.com/300x400/111111/d4af37?text=Guest+Suit+1" alt="Navy Suit">
                 </div>
                 <div class="product-info">
                     <div class="product-title">Classic Navy Slim Fit Suit</div>
+                    <div class="product-details">
+                        <span><i class="fa-solid fa-shirt"></i> Slim Fit</span>
+                        <span><i class="fa-solid fa-palette"></i> Navy Blue</span>
+                    </div>
                     <div class="product-price">Price on Request</div>
                     <button class="action-btn" onclick="openModal('Classic Navy Slim Fit Suit')">
-                        <i class="fa-regular fa-calendar-check"></i> Inquiry / Reservation
+                        <i class="fa-regular fa-calendar-check"></i> Book / Inquire
                     </button>
                 </div>
             </div>
+
         </div>
     </div>
 
     <!-- Window 3: Kids Suits -->
     <div id="kids" class="tab-content">
         <div class="products-grid">
+
             <div class="product-card">
                 <div class="product-img-box">
                     <span class="product-tag">Rent / Sale</span>
-                    <i class="fa-solid fa-child"></i>
+                    <img src="https://via.placeholder.com/300x400/111111/d4af37?text=Kids+Suit+1" alt="Kids Suit">
                 </div>
                 <div class="product-info">
                     <div class="product-title">3-Piece Formal Kids Suit</div>
+                    <div class="product-details">
+                        <span><i class="fa-solid fa-child"></i> Ages 4-14</span>
+                        <span><i class="fa-solid fa-palette"></i> Dark Blue</span>
+                    </div>
                     <div class="product-price">Price on Request</div>
                     <button class="action-btn" onclick="openModal('3-Piece Formal Kids Suit')">
-                        <i class="fa-regular fa-calendar-check"></i> Inquiry / Reservation
+                        <i class="fa-regular fa-calendar-check"></i> Book / Inquire
                     </button>
                 </div>
             </div>
+
         </div>
     </div>
 
     <!-- Window 4: Shoes & Accessories -->
     <div id="accessories" class="tab-content">
         <div class="products-grid">
+
             <div class="product-card">
                 <div class="product-img-box">
                     <span class="product-tag">Sale</span>
-                    <i class="fa-solid fa-shoe-prints"></i>
+                    <img src="https://via.placeholder.com/300x400/111111/d4af37?text=Leather+Shoes" alt="Leather Shoes">
                 </div>
                 <div class="product-info">
                     <div class="product-title">Italian Genuine Leather Shoes</div>
+                    <div class="product-details">
+                        <span><i class="fa-solid fa-shoe-prints"></i> Leather</span>
+                        <span><i class="fa-solid fa-palette"></i> Black / Brown</span>
+                    </div>
                     <div class="product-price">Price on Request</div>
                     <button class="action-btn" onclick="openModal('Italian Genuine Leather Shoes')">
-                        <i class="fa-regular fa-calendar-check"></i> Inquiry / Reservation
+                        <i class="fa-regular fa-calendar-check"></i> Book / Inquire
                     </button>
                 </div>
             </div>
+
+            <div class="product-card">
+                <div class="product-img-box">
+                    <span class="product-tag">Sale</span>
+                    <img src="https://via.placeholder.com/300x400/111111/d4af37?text=Bowties+%26+Cufflinks" alt="Accessories Set">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">Luxury Bowtie & Cufflinks Set</div>
+                    <div class="product-details">
+                        <span><i class="fa-solid fa-gem"></i> Silk & Steel</span>
+                    </div>
+                    <div class="product-price">Price on Request</div>
+                    <button class="action-btn" onclick="openModal('Luxury Bowtie & Cufflinks Set')">
+                        <i class="fa-regular fa-calendar-check"></i> Book / Inquire
+                    </button>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -487,21 +641,21 @@
     <div id="bookingModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeModal()">&times;</span>
-            <h3 class="modal-title">Book / Inquire Now</h3>
+            <h3 class="modal-title"><i class="fa-solid fa-paper-plane"></i> Book / Inquire Now</h3>
             <form id="bookingForm" onsubmit="sendToWhatsApp(event)">
                 <div class="form-group">
-                    <label>Selected Item:</label>
+                    <label><i class="fa-solid fa-tag"></i> Selected Item:</label>
                     <input type="text" id="selectedProduct" readonly>
                 </div>
                 <div class="form-group">
-                    <label>Your Full Name:</label>
-                    <input type="text" id="clientName" required placeholder="Enter your name">
+                    <label><i class="fa-solid fa-user"></i> Your Full Name:</label>
+                    <input type="text" id="clientName" required placeholder="Enter your full name">
                 </div>
                 <div class="form-group">
-                    <label>Service Type:</label>
+                    <label><i class="fa-solid fa-handshake"></i> Service Type:</label>
                     <select id="serviceType">
-                        <option value="Rental">Rental</option>
-                        <option value="Purchase">Purchase</option>
+                        <option value="Rental">Rental (كراء)</option>
+                        <option value="Purchase">Purchase (شراء)</option>
                     </select>
                 </div>
                 <button type="submit" class="submit-btn">
@@ -515,10 +669,16 @@
     <footer>
         <div class="footer-info">
             <h3>HANDSOME LOCATION COSTUME</h3>
-            <p class="phone-number">📞 0556938064</p>
-            <p>Welcome to our store for the finest looks on your special occasions</p>
+            <p class="phone-number"><i class="fa-solid fa-phone"></i> 0556938064</p>
+            <p><i class="fa-solid fa-location-dot"></i> Visit us to discover the finest collection for your events</p>
+            
+            <div class="footer-socials">
+                <a href="https://wa.me/213556938064" class="social-link" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" class="social-link" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-link" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
         </div>
-        <p style="color: var(--text-muted); font-size: 13px;">All Rights Reserved &copy; 2026</p>
+        <p style="color: var(--text-muted); font-size: 12px;">All Rights Reserved &copy; 2026 HANDSOME</p>
     </footer>
 
     <!-- JavaScript Navigation -->
