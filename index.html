@@ -15,8 +15,8 @@
             --card-bg: #141414;
             --accent-gold: #d4af37;
             --accent-gold-hover: #f3e5ab;
-            --text-light: #f5f5f5;
-            --text-muted: #999999;
+            --text-light: #ffffff; /* جعل النصوص الرئيسية باللون الأبيض الناصع */
+            --text-muted: #d1d1d1; /* إبراز النصوص الفرعية باللون الأبيض الهادئ */
             --border-color: #262626;
         }
 
@@ -32,7 +32,7 @@
             color: var(--text-light);
             line-height: 1.6;
             
-            /* تم إضافة صورتك IMG_3795.jpeg هنا كخلفية للموقع بالكامل مع تظليل راقي */
+            /* خلفية الموقع بملف الصورة مع تظليل داكن راقي */
             background-image: linear-gradient(rgba(10, 10, 10, 0.88), rgba(10, 10, 10, 0.88)), url('IMG_3795.jpeg');
             background-size: cover;
             background-position: center;
@@ -42,7 +42,7 @@
 
         /* Header & Navigation */
         header {
-            background-color: rgba(10, 10, 10, 0.9);
+            background-color: rgba(10, 10, 10, 0.92);
             border-bottom: 1px solid var(--border-color);
             position: sticky;
             top: 0;
@@ -56,7 +56,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 20px;
+            padding: 12px 20px;
         }
 
         .brand-logo {
@@ -65,16 +65,21 @@
             gap: 12px;
         }
 
-        .brand-logo i {
-            font-size: 28px;
-            color: var(--accent-gold);
+        /* الصورة الدائرية في الركن العلوي */
+        .brand-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-gold);
+            object-fit: cover;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
         }
 
         .brand-title {
             font-size: 22px;
             font-weight: 800;
             letter-spacing: 2px;
-            color: var(--accent-gold);
+            color: #ffffff; /* اسم المحل باللون الأبيض */
             text-transform: uppercase;
         }
 
@@ -86,7 +91,7 @@
 
         .contact-top-btn {
             background: linear-gradient(135deg, var(--accent-gold), #aa820a);
-            color: #000;
+            color: #000000;
             padding: 8px 20px;
             border-radius: 25px;
             text-decoration: none;
@@ -112,17 +117,18 @@
 
         .hero-banner h1 {
             font-size: 38px;
-            color: var(--accent-gold);
+            color: #ffffff; /* العنوان الرئيسي باللون الأبيض */
             margin-bottom: 10px;
             font-weight: 800;
             letter-spacing: 1px;
         }
 
         .hero-banner p {
-            color: var(--text-muted);
+            color: #ffffff; /* النص الفرعي باللون الأبيض */
             font-size: 16px;
             max-width: 650px;
             margin: 0 auto 20px;
+            opacity: 0.9;
         }
 
         .hero-features {
@@ -131,7 +137,7 @@
             gap: 25px;
             flex-wrap: wrap;
             margin-top: 20px;
-            color: var(--accent-gold);
+            color: #ffffff;
             font-size: 14px;
         }
 
@@ -143,6 +149,11 @@
             padding: 6px 16px;
             border-radius: 20px;
             border: 1px solid var(--border-color);
+            color: #ffffff;
+        }
+
+        .hero-features span i {
+            color: var(--accent-gold);
         }
 
         /* Tabs Navigation Section */
@@ -163,7 +174,7 @@
 
         .tab-btn {
             background: rgba(20, 20, 20, 0.85);
-            color: var(--text-light);
+            color: #ffffff;
             border: 1px solid var(--border-color);
             padding: 12px 22px;
             border-radius: 8px;
@@ -183,7 +194,7 @@
 
         .tab-btn.active {
             background-color: var(--accent-gold);
-            color: #000;
+            color: #000000;
             border-color: var(--accent-gold);
             box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
         }
@@ -267,14 +278,14 @@
             font-size: 17px;
             font-weight: 700;
             margin-bottom: 8px;
-            color: var(--text-light);
+            color: #ffffff; /* أسماء البطاقات باللون الأبيض */
         }
 
         .product-details {
             display: flex;
             gap: 15px;
-            font-size: 12px;
-            color: var(--text-muted);
+            font-size: 13px;
+            color: #d1d1d1; /* تفاصيل المنتج باللون الأبيض الواضح */
             margin-bottom: 15px;
         }
 
@@ -295,7 +306,7 @@
         .action-btn {
             width: 100%;
             background-color: transparent;
-            color: var(--text-light);
+            color: #ffffff;
             border: 1px solid var(--accent-gold);
             padding: 10px;
             border-radius: 6px;
@@ -311,7 +322,7 @@
 
         .action-btn:hover {
             background-color: var(--accent-gold);
-            color: #000;
+            color: #000000;
         }
 
         /* Footer */
@@ -323,9 +334,13 @@
             margin-top: 60px;
         }
 
-        .footer-info {
-            max-width: 600px;
-            margin: 0 auto 20px;
+        .footer-info h3 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .footer-info p {
+            color: #ffffff;
         }
 
         .footer-socials {
@@ -352,7 +367,7 @@
         .social-link:hover {
             border-color: var(--accent-gold);
             background: var(--accent-gold);
-            color: #000;
+            color: #000000;
         }
 
         .phone-number {
@@ -392,7 +407,7 @@
             top: 15px;
             right: 15px;
             font-size: 20px;
-            color: var(--text-muted);
+            color: #ffffff;
             cursor: pointer;
         }
 
@@ -414,7 +429,7 @@
             display: block;
             margin-bottom: 5px;
             font-size: 13px;
-            color: var(--text-muted);
+            color: #ffffff;
         }
 
         .form-group input, .form-group select {
@@ -423,7 +438,7 @@
             background-color: #0a0a0a;
             border: 1px solid var(--border-color);
             border-radius: 6px;
-            color: var(--text-light);
+            color: #ffffff;
             outline: none;
         }
 
@@ -434,7 +449,7 @@
         .submit-btn {
             width: 100%;
             background-color: var(--accent-gold);
-            color: #000;
+            color: #000000;
             border: none;
             padding: 12px;
             border-radius: 6px;
@@ -461,7 +476,8 @@
     <header>
         <div class="header-container">
             <div class="brand-logo">
-                <i class="fa-solid fa-user-tie"></i>
+                <!-- صورة دائرية صغيرة للعلامة التجارية في الركن العلوي -->
+                <img src="IMG_3795.jpeg" alt="HANDSOME Logo" class="brand-avatar">
                 <span class="brand-title">HANDSOME</span>
             </div>
             <div class="header-actions">
@@ -664,7 +680,7 @@
                 <a href="#" class="social-link" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
             </div>
         </div>
-        <p style="color: var(--text-muted); font-size: 12px;">All Rights Reserved &copy; 2026 HANDSOME</p>
+        <p style="color: #ffffff; font-size: 12px;">All Rights Reserved &copy; 2026 HANDSOME</p>
     </footer>
 
     <!-- JavaScript Navigation -->
